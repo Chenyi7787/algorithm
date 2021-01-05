@@ -1,6 +1,8 @@
 # coding=utf-8
 # author by Bruce Chen 2021/01/04
-
+import sys
+sys.path.append("../")
+from calc_time_decorator import calc_time
 '''
 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。
 
@@ -23,6 +25,7 @@
 
 # Solution_1
 class Solution_1:
+    @calc_time
     def isanagram(self, s, t):
         '''
         :param s: str
@@ -64,6 +67,7 @@ class Solution_1:
 
 # Solution_2
 class Solution_2:
+    @calc_time
     def isanagram(self, s, t):
         '''
         :param s: str
@@ -80,6 +84,7 @@ class Solution_2:
 # Solution_3
 from collections import Counter
 class Solution_3:
+    @calc_time
     def isanagram(self, s, t):
         '''
         :param s: str
@@ -97,6 +102,12 @@ class Solution_3:
 if __name__ == "__main__":
     s = "anagram"
     t = "nagaram"
-    test = Solution_3()
-    result = test.isanagram(s, t)
-    print(result)
+    test1 = Solution_1()
+    test2 = Solution_2()
+    test3 = Solution_3()
+    result1 = test1.isanagram(s, t)
+    result2 = test2.isanagram(s, t)
+    result3 = test3.isanagram(s, t)
+    print(result1)
+    print(result2)
+    print(result3)
