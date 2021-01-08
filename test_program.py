@@ -6,7 +6,9 @@ This is a test program for daily
 
 from collections import Counter
 
-
+nums = [4,3,10,9,8]
+nums.sort(reverse=True)
+print(nums)
 # s = "anagram"
 #
 # t = "nagaram"
