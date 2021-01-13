@@ -6,12 +6,7 @@ This is a test program for daily
 
 from collections import Counter
 
-ch = 'e'
-ch2 = 'E'
-print(ch.upper())
-print(ch2.lower())
+t = [1,2,3]
+s = [1,2,3]
 
-s = []
-s.append(2)
-
-print(s)
+print(s == t)
