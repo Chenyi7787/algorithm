@@ -6,8 +6,12 @@ This is a test program for daily
 
 from collections import Counter
 
-nums = [4,3,10,9,8]
-# nums.sort(reverse=True)
-print(nums.sort())
+ch = 'e'
+ch2 = 'E'
+print(ch.upper())
+print(ch2.lower())
 
-print(sorted(nums))
+s = []
+s.append(2)
+
+print(s)
