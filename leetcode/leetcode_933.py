@@ -39,16 +39,17 @@ recentCounter.ping(3002);  // requests = [1, 100, 3001, 3002]，范围是 [2,300
     至多调用 ping 方法 104 次
 """
 from collections import deque
+
 class RecentCounter:
 
     def __init__(self):
-        self.queue = []
+        self.queue = deque()
 
 
     def ping(self, t):
         self.queue.append(t)
         while self.queue[0] < (t - 3000):
-            self.queue.pop(0)
+            self.queue.popleft()
         return len(self.queue)
 
 
