@@ -4,9 +4,14 @@
 This is a test program for daily
 '''
 
-from collections import Counter
+from collections import Counter, deque
 
-t = [1,2,3]
-s = [1,2,3]
+q = deque()
+q.append(1)
+q.append(2)
+q.append(3)
+q.append(4)
+q.append(5)
 
-print(s == t)
+print(q[4])
+print(len(q))
